@@ -3,6 +3,7 @@ package controllers;
 import java.io.IOException;
 import java.sql.SQLException;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebFilter;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -27,7 +28,8 @@ public class ClienteController extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		String cmd = request.getParameter("cmd");
+		response.getWriter().append("CMD: "+cmd+" | Served at: ").append(request.getContextPath());
 		/*HttpSession session = request.getSession();
 		try {
 			session.setAttribute("clientes", cliente.obterClientes());
@@ -37,5 +39,9 @@ public class ClienteController extends HttpServlet {
 		doGet(request, response);
 	}
 	
+	private void gravarCliente(HttpServletRequest request, HttpServletResponse response) {
+		Cliente c = new Cliente();
+		
+	}
 
 }
