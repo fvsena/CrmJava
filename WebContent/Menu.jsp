@@ -9,7 +9,7 @@
 	<title>CRM Java</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-0 m-o">
         <ul class="navbar-nav">
             <li class="nav-item"><a href="#" class="navbar-brand">Cliente</a></li>
             <li class="nav-item"><a href="#" class="navbar-brand">Contato</a></li>

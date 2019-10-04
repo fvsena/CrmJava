@@ -16,7 +16,7 @@
                 Autenticação - CRM Java
             </div>
             <div class="card-body">
-            	<form method="POST" action="logon">
+            	<form method="POST" action="Login">
                     <div class="form-row">
                         <div class="form-group col-12">
                             <label for="Usuario">Usuário</label>

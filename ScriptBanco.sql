@@ -12,6 +12,7 @@ CREATE TABLE Customer
 		Gender CHAR(1) NOT NULL,
 		CustomerDate DATETIME NOT NULL
 	)
+
 GO
 ALTER TABLE Customer ADD CONSTRAINT PK_Customer PRIMARY KEY(IdCustomer)
 ALTER TABLE Customer ADD CONSTRAINT CH_GenderCustomer CHECK (Gender IN ('M','F','I'))
@@ -83,6 +84,8 @@ CREATE TABLE Agent
 		Password VARCHAR(255),
 		Status BIT NOT NULL
 	)
+GO
+INSERT INTO Agent VALUES('Administrador','admin.crm','123',1)
 GO
 ALTER TABLE Agent ADD CONSTRAINT PK_Agent PRIMARY KEY(IdAgent)
 GO
